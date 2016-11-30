@@ -7,15 +7,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.List;
 
-/**
- * Created by ing_l on 17/11/2016.
- */
 
-public class EnlaceBD {
-    private static EnlaceBD enlace;
+public class
+BD {
+    private static BD enlace;
     private SQLiteDatabase bd;
 
-    public EnlaceBD(final Context context) {
+    public BD(final Context context) {
         SQLiteOpenHelper sql = new SQLiteOpenHelper(context, "principal", null, 1) {
             @Override
             public void onCreate(SQLiteDatabase db) {
@@ -41,7 +39,7 @@ public class EnlaceBD {
         return bd.rawQuery(sql, null);
     }
 
-    public static EnlaceBD getEnlace() {
+    public static BD getEnlace() {
         return enlace;
     }
 }
